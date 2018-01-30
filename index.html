@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Práctica 18</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
 <form action="http://jorgesanchez.net/servicios/ver-datos.php" method="post">
-    <table border="1">
+    <table>
         <tr>
             <th colspan="3"><h1>Fromulario de Alta</h1></th>
         </tr>
@@ -34,23 +40,79 @@
             </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
+            <td colspan="2">
+                <fieldset>
+                    <legend>Intereses</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="deportes">Deportes</label>
+                                <input type="checkbox" name="deportes" id="deportes" value="deportes">
+                            </td>
+                            <td>
+                                <label for="cine">Cine</label>
+                                <input type="checkbox" name="cine" id="cine" value="cine">
+                            </td>
+                            <td>
+                                <label for="teatro">Teatro</label>
+                                <input type="checkbox" name="teatro" id="teatro" value="teatro">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="musica">Música</label>
+                                <input type="checkbox" name="musica" id="musica" value="musica">
+                            </td>
+                            <td>
+                                <label for="viajes">Viajes</label>
+                                <input type="checkbox" name="viajes" id="viajes" value="viajes">
+                            </td>
+                            <td>
+                                <label for="otras">Otras</label>
+                                <input type="checkbox" name="otras" id="otras" value="otras">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="2">
+                <label for="sexo">Sexo:</label>
+                <input type="radio" id="hombre" name="sexo" value="hombre">
+                <label for="hombre">Hombre</label>
+                <input type="radio" id="mujer" name="sexo" value="mujer">
+                <label for="mujer">Mujer</label>
+            </td>
+            <td>
+                <label for="conocer">¿Cómo conociste a MundoOcio.com?</label>
+                <select name="conocer" id="conocer">
+                    <optgroup label="Recomendación">
+                        <option value="am">Amigos</option>
+                        <option value="fa">Familiares</option>
+                        <option value="ot">Otros</option>
+                    </optgroup>
+                    <optgroup label="Medios">
+                        <option value="in">Internet</option>
+                        <option value="tv">TV</option>
+                        <option value="pr">Prensa</option>
+                        <option value="ra">Radio</option>
+                        <option value="ot1">Otros</option>
+                    </optgroup>
+                </select>
+            </td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="3">
+                <label for="comentarios">Escribe ahora los comentarios que estimes oportunos</label><br>
+                <textarea rows="10" cols="100" name="comentarios" id="comentarios"></textarea>
+            </td>
         </tr>
         <tr>
-            <td colspan="3"></td>
+            <td colspan="3"><button id="Enviar">Enviar</button></td>
         </tr>
     </table>
 </form>
+<h1>Ir a otras zonas de MundoOcio.com</h1>
 </body>
 </html>
